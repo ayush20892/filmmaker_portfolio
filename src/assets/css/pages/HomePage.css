@@ -1,0 +1,16 @@
+.home-background-image {
+  height: 100%;
+  background-image: url("../../images/homePage/Summer+Open_Cheryl+Mukherji+06.jpg");
+  position: relative;
+}
+
+.social-icons {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.social-icons-pill {
+  font-size: 30px;
+  color: white;
+}
