@@ -1,5 +1,41 @@
 .portfolio-name {
   font-family: "Roboto Slab", serif;
   padding: 30px;
-  color: #fff;
+  cursor: pointer;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item-pill {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.ham-icon {
+  font-size: 30px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item-pill {
+    padding: 20px 0;
+    cursor: pointer;
+  }
 }
