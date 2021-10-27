@@ -1,12 +1,31 @@
+import "../assets/css/components/SocialIcon.css";
 import { AiOutlineInstagram, AiOutlineLinkedin } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 
-const SocialIcons = () => {
+const SocialIcons = ({ iconColor }) => {
   return (
-    <div className="position-absolute bottom-0 w-100 py-3">
-      <HiOutlineMail className="social-icons-pill mx-2" />
-      <AiOutlineInstagram className="social-icons-pill mx-2" />
-      <AiOutlineLinkedin className="social-icons-pill mx-2" />
+    <div className="social-icons">
+      <a href="mailto: trueimkaveri.sharma@gmail.com">
+        <HiOutlineMail
+          className={`social-icon-pill ${
+            iconColor === "white" ? "text-light" : "text-dark"
+          }`}
+        />
+      </a>
+      <a href="https://www.instagram.com">
+        <AiOutlineInstagram
+          className={`social-icon-pill ${
+            iconColor === "white" ? "text-light" : "text-dark"
+          }`}
+        />
+      </a>
+      <a href="https://www.linkedin.com/">
+        <AiOutlineLinkedin
+          className={`social-icon-pill ${
+            iconColor === "white" ? "text-light" : "text-dark"
+          }`}
+        />
+      </a>
     </div>
   );
 };
