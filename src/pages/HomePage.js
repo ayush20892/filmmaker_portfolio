@@ -1,9 +1,9 @@
 import "../assets/css/pages/HomePage.css";
+import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
 import SocialIcons from "../components/SocialIcons";
-import { useMediaQuery } from "react-responsive";
-import { useEffect, useState } from "react";
 
 const HomePage = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 640px)` });
