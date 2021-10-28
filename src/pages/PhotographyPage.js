@@ -1,11 +1,11 @@
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
-import AboutSection from "../components/AboutSection";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
+import PhotographySection from "../components/PhotographySection";
 import SocialIcons from "../components/SocialIcons";
 
-const About = () => {
+const PhotographyPage = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 640px)` });
   const [hamMenu, setHamMenu] = useState(0);
 
@@ -27,16 +27,16 @@ const About = () => {
       ) : (
         <NavbarDesktop textColor="black" />
       )}
-      {/* ******************** */}
-      {/* About Content        */}
-      {/* ******************** */}
-      {!hamMenu && <AboutSection />}
+      {/* ****************************** */}
+      {/* PhotographyPage Content        */}
+      {/* ****************************** */}
+      {!hamMenu && <PhotographySection />}
       {/* ******************** */}
       {/* Social Icon          */}
       {/* ******************** */}
-      {hamMenu || !isMobile ? <SocialIcons /> : <></>}
+      {hamMenu ? <SocialIcons /> : <></>}
     </div>
   );
 };
 
-export default About;
+export default PhotographyPage;
