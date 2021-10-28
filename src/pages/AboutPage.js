@@ -1,4 +1,3 @@
-import "../assets/css/pages/AboutPage.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 import AboutSection from "../components/AboutSection";
