@@ -1,8 +1,12 @@
 import "../assets/css/components/Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { NavLink, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   return (
     <>
       {hamMenu ? (
@@ -12,13 +16,15 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
             {/* ************************** */}
             {/* Portfolio Client Name      */}
             {/* ************************** */}
-            <h1
+            <NavLink
+              to="/"
+              onClick={() => navigate("/")}
               className={`portfolio-name ${
                 textColor === "white" ? "text-light" : "text-dark"
               }`}
             >
               Kaveri Sharma
-            </h1>
+            </NavLink>
             {/* ************************** */}
             {/* Close cross Icon           */}
             {/* ************************** */}
@@ -33,34 +39,42 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
           {/* Menu Items                 */}
           {/* ************************** */}
           <div className="menu-items">
-            <h5
+            <NavLink
+              to="/movies"
+              onClick={() => navigate("/movies")}
               className={`menu-item-pill ${
                 textColor === "white" ? "text-light" : "text-dark"
-              } cursor-pointer`}
+              } ${pathname === "/movies" && "fw-bold"}`}
             >
               Movies
-            </h5>
-            <h5
+            </NavLink>
+            <NavLink
+              to="/photography"
+              onClick={() => navigate("/photography")}
               className={`menu-item-pill ${
                 textColor === "white" ? "text-light" : "text-dark"
-              } cursor-pointer`}
+              } ${pathname === "/photography" && "fw-bold"}`}
             >
               Photography
-            </h5>
-            <h5
+            </NavLink>
+            <NavLink
+              to="/writing"
+              onClick={() => navigate("/writing")}
               className={`menu-item-pill ${
                 textColor === "white" ? "text-light" : "text-dark"
-              } cursor-pointer`}
+              } ${pathname === "/writing" && "fw-bold"}`}
             >
               Writing
-            </h5>
-            <h5
+            </NavLink>
+            <NavLink
+              to="/about"
+              onClick={() => navigate("/about")}
               className={`menu-item-pill ${
                 textColor === "white" ? "text-light" : "text-dark"
-              } cursor-pointer`}
+              }  ${pathname === "/about" && "fw-bold"}`}
             >
               About
-            </h5>
+            </NavLink>
           </div>
         </>
       ) : (
@@ -69,13 +83,15 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
           {/* ************************** */}
           {/* Portfolio Client Name      */}
           {/* ************************** */}
-          <h1
+          <NavLink
+            to="/"
+            onClick={() => navigate("/")}
             className={`portfolio-name ${
               textColor === "white" ? "text-light" : "text-dark"
             }`}
           >
             Kaveri Sharma
-          </h1>
+          </NavLink>
           {/* ************************** */}
           {/* Hamburger Icon             */}
           {/* ************************** */}

@@ -1,50 +1,63 @@
 import "../assets/css/components/Navbar.css";
+import { NavLink, useLocation } from "react-router-dom";
 
 const NavbarDesktop = ({ textColor }) => {
+  const { pathname } = useLocation();
   return (
     <>
       {/* ************************** */}
       {/* Portfolio Client Name      */}
       {/* ************************** */}
-      <h1
+      <NavLink
+        to="/"
         className={`portfolio-name ${
           textColor === "white" ? "text-light" : "text-dark"
         }`}
       >
         Kaveri Sharma
-      </h1>
+      </NavLink>
       {/* ************************** */}
       {/* Menu Items                 */}
       {/* ************************** */}
       <div className="menu-items">
-        <h6
+        <NavLink
+          to="/movies"
           className={`menu-item-pill ${
             textColor === "white" ? "text-light" : "text-dark"
-          }`}
+          } ${pathname === "/movies" && "fw-bold"}`}
         >
           Movies
-        </h6>
-        <h6
+        </NavLink>
+        <NavLink
+          to="/photography"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
           className={`menu-item-pill ${
             textColor === "white" ? "text-light" : "text-dark"
-          }`}
+          } ${pathname === "/photography" && "fw-bold"}`}
         >
           Photography
-        </h6>
-        <h6
+        </NavLink>
+        <NavLink
+          to="/writing"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
           className={`menu-item-pill ${
             textColor === "white" ? "text-light" : "text-dark"
-          }`}
+          } ${pathname === "/writing" && "fw-bold"}`}
         >
           Writing
-        </h6>
-        <h6
+        </NavLink>
+        <NavLink
+          to="/about"
           className={`menu-item-pill ${
             textColor === "white" ? "text-light" : "text-dark"
-          }`}
+          } ${pathname === "/about" && "fw-bold"}`}
         >
           About
-        </h6>
+        </NavLink>
       </div>
     </>
   );

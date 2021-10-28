@@ -1,11 +1,11 @@
-import "../assets/css/pages/HomePage.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
+import AboutSection from "../components/AboutSection";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
 import SocialIcons from "../components/SocialIcons";
 
-const HomePage = () => {
+const About = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 640px)` });
   const [hamMenu, setHamMenu] = useState(0);
 
@@ -14,19 +14,29 @@ const HomePage = () => {
   }, [isMobile]);
 
   return (
-    <div className={` ${hamMenu ? "" : "home-background-image"} w-100`}>
+    <div className="w-100">
+      {/* ******************** */}
+      {/* Navbar               */}
+      {/* ******************** */}
       {isMobile ? (
         <NavbarMobile
-          textColor={hamMenu ? "black" : "white"}
+          textColor="black"
           hamMenu={hamMenu}
           setHamMenu={setHamMenu}
         />
       ) : (
-        <NavbarDesktop textColor="white" />
+        <NavbarDesktop textColor="black" />
       )}
-      <SocialIcons iconColor={hamMenu ? "black" : "white"} />
+      {/* ******************** */}
+      {/* About Content        */}
+      {/* ******************** */}
+      {!hamMenu && <AboutSection />}
+      {/* ******************** */}
+      {/* Social Icon          */}
+      {/* ******************** */}
+      {hamMenu ? <SocialIcons /> : <></>}
     </div>
   );
 };
 
-export default HomePage;
+export default About;
