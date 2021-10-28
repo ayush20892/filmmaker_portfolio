@@ -34,7 +34,7 @@ const About = () => {
       {/* ******************** */}
       {/* Social Icon          */}
       {/* ******************** */}
-      {hamMenu ? <SocialIcons /> : <></>}
+      {hamMenu || !isMobile ? <SocialIcons /> : <></>}
     </div>
   );
 };
