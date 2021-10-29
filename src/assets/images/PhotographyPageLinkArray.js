@@ -25,7 +25,100 @@ import t42 from "../images/photographyPage/t4/2.jpg";
 import t43 from "../images/photographyPage/t4/3.jpg";
 import t44 from "../images/photographyPage/t4/4.jpg";
 import t45 from "../images/photographyPage/t4/5.jpg";
-
+// const PhotographyPageLinkArray =[
+// {
+//   PhotoTopic:"Children",
+//   images:[
+//     {
+//       imageUrl:t10,
+//     },
+//     {
+//       imageUrl:t11,
+//     },
+//     {
+//       imageUrl:t12,
+//     }
+//     {
+//       imageUrl:t13,
+//     },
+//     {
+//       imageUrl:t14,
+//     }
+//     {
+//       imageUrl:t15,
+//     },
+//   ],
+// },
+// {
+//   PhotoTopic:"Victoria",
+//   images:[
+//     {
+//       imageUrl:t20,
+//     },
+//     {
+//       imageUrl:t21,
+//     },
+//     {
+//       imageUrl:t22,
+//     }
+//     {
+//       imageUrl:t23,
+//     },
+//     {
+//       imageUrl:t24,
+//     }
+//     {
+//       imageUrl:t25,
+//     },
+//   ],
+// },
+// {
+//   PhotoTopic:"Steppe",
+//   images:[
+//     {
+//       imageUrl:t30,
+//     },
+//     {
+//       imageUrl:t31,
+//     },
+//     {
+//       imageUrl:t32,
+//     }
+//     {
+//       imageUrl:t33,
+//     },
+//     {
+//       imageUrl:t34,
+//     }
+//     {
+//       imageUrl:t35,
+//     },
+//   ],
+// },
+// {
+//   PhotoTopic:"The world is too dark,Mom!",
+//   images:[
+//     {
+//       imageUrl:t40,
+//     },
+//     {
+//       imageUrl:t41,
+//     },
+//     {
+//       imageUrl:t42,
+//     }
+//     {
+//       imageUrl:t43,
+//     },
+//     {
+//       imageUrl:t44,
+//     }
+//     {
+//       imageUrl:t45,
+//     },
+//   ],
+// },
+// ];
 const PhotographyPageLinkArray = {
   t1: [t10, t11, t12, t13, t14, t15],
   t2: [t20, t21, t22, t23, t24, t25],
