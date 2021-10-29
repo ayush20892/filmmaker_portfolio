@@ -3,7 +3,7 @@ import PhotographyPageLinkArray from "../assets/images/PhotographyPageLinkArray"
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-const PhotographySection = () => {
+const PhotographySectionDesktop = () => {
   const [activeTopic, setActiveTopic] = useState("t1");
 
   function topicClickHandler(e) {
@@ -49,7 +49,7 @@ const PhotographySection = () => {
       <div className="photos">
         {PhotographyPageLinkArray[activeTopic].map((picture) => {
           return (
-            <div className="picture">
+            <div key={picture} className="picture">
               <img src={picture} alt="" />
             </div>
           );
@@ -58,4 +58,4 @@ const PhotographySection = () => {
     </div>
   );
 };
-export default PhotographySection;
+export default PhotographySectionDesktop;

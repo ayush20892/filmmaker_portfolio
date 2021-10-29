@@ -2,7 +2,8 @@ import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
-import PhotographySection from "../components/PhotographySection";
+import PhotographySectionDesktop from "../components/PhotographySectionDesktop";
+import PhotographySectionMobile from "../components/PhotographySectionMobile";
 import SocialIcons from "../components/SocialIcons";
 
 const PhotographyPage = () => {
@@ -30,7 +31,16 @@ const PhotographyPage = () => {
       {/* ****************************** */}
       {/* PhotographyPage Content        */}
       {/* ****************************** */}
-      {!hamMenu && <PhotographySection />}
+      {!hamMenu ? (
+        isMobile ? (
+          <PhotographySectionMobile />
+        ) : (
+          <PhotographySectionDesktop />
+        )
+      ) : (
+        <></>
+      )}
+
       {/* ******************** */}
       {/* Social Icon          */}
       {/* ******************** */}
