@@ -17,8 +17,8 @@ const WritingSection = () => {
             <div className="writing-topic-name">{topic.topic}</div>
             <div className="writing-topic-desc">{topic.topicDesc}</div>
             {/*redirect button */}
-            <a href="https://ayush-sharma20.netlify.app/projects.html">
-              <BiLinkExternal className="mx-4" />
+            <a target="_blank" rel="noreferrer" href={topic.topicLink}>
+              <BiLinkExternal className="link-icon" />
             </a>
           </div>
         );

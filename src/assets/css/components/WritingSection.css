@@ -1,44 +1,52 @@
 .writing-container {
+  width: 1000px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 10px;
-  margin: 20px;
+  margin: auto;
+  margin-top: 20px;
 }
 .writing-topic {
-  width: 25%;
-  height: 25%;
+  width: 40%;
   display: flex;
   justify-content: start;
-  margin: 10px;
-  padding: 5px;
   flex-wrap: wrap;
+  margin: 20px;
+  padding: 5px;
+  text-align: left;
+  border: 2px solid black;
   border-radius: 1rem;
-  border-color: black;
-  border-style: solid;
 }
 .writing-topic-name {
   margin: 3px;
   font-weight: bold;
   font-family: "Roboto Slab", serif;
   font-size: 25px;
-  text-align: center;
 }
-a {
+
+.writing-topic-desc {
+  font-family: "Roboto Slab", serif;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.link-icon {
   cursor: pointer;
+  font-size: 30px;
+  margin-left: 5px;
 }
+
 @media screen and (max-width: 640px) {
   .writing-container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
   }
   .writing-topic {
-    width: 70%;
-  }
-  .writing-topic-desc {
-    text-align: left;
-    font-family: "Roboto Slab", serif;
-    font-size: 15px;
-    padding: 5px;
+    width: 85%;
   }
 }
