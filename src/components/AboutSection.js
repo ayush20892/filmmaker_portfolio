@@ -33,7 +33,7 @@ const AboutSection = () => {
         </p>{" "}
         {/* Mail Button */}
         <a href="mailto: trueimkaveri.sharma@gmail.com" className="mail-button">
-          cherylmukherji@gmail.com
+          trueimkaveri.sharma@gmail.com
         </a>
         {/* Resume Button */}
         <div className="resume-button">Résumé</div>
