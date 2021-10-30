@@ -9,7 +9,7 @@ const MoviesSection = () => {
       {/* *********************************** */}
       {MoviePageArray.map((movie) => {
         return (
-          <div className="movie-topic-container">
+          <div key={movie.movieTopic} className="movie-topic-container">
             {/* ****************************** */}
             {/* Movie Topic Name               */}
             {/* ****************************** */}
@@ -20,7 +20,7 @@ const MoviesSection = () => {
             <div className="movie-topic-images">
               {movie.images.map((movieImage) => {
                 return (
-                  <div className="topic-image">
+                  <div key={movieImage.imageURL} className="topic-image">
                     {/* Thumbnail Image */}
                     <img src={movieImage.imageURL} alt="" />
                     {/* Thumbnail Title */}

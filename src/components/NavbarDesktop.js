@@ -30,9 +30,6 @@ const NavbarDesktop = ({ textColor }) => {
         </NavLink>
         <NavLink
           to="/photography"
-          activeStyle={{
-            fontWeight: "bold",
-          }}
           className={`menu-item-pill ${
             textColor === "white" ? "text-light" : "text-dark"
           } ${pathname === "/photography" && "fw-bold"}`}
@@ -41,9 +38,6 @@ const NavbarDesktop = ({ textColor }) => {
         </NavLink>
         <NavLink
           to="/writing"
-          activeStyle={{
-            fontWeight: "bold",
-          }}
           className={`menu-item-pill ${
             textColor === "white" ? "text-light" : "text-dark"
           } ${pathname === "/writing" && "fw-bold"}`}
