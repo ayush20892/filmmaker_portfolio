@@ -1,6 +1,7 @@
 .movie-container {
   margin: 10px;
   text-align: left;
+  min-height: 100vh;
 }
 
 .movie-topic-container {

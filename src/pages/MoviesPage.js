@@ -34,7 +34,7 @@ const MoviesPage = () => {
       {/* ******************** */}
       {/* Social Icon          */}
       {/* ******************** */}
-      {hamMenu ? <SocialIcons /> : <></>}
+      <SocialIcons />
     </div>
   );
 };

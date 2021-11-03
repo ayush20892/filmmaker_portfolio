@@ -24,6 +24,7 @@ const HomePage = () => {
       ) : (
         <NavbarDesktop textColor="white" />
       )}
+      {!hamMenu && <div className="home-content"></div>}
       <SocialIcons iconColor={hamMenu ? "black" : "white"} />
     </div>
   );

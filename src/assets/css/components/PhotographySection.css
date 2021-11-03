@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: flex-start;
   margin: 20px 20px;
+  min-height: 60vh;
 }
 .photo-topic {
   display: flex;
@@ -47,8 +48,10 @@
   .photo-container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     margin: 10px;
+    min-height: 75vh;
   }
 
   .photos {

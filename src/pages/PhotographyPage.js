@@ -44,7 +44,7 @@ const PhotographyPage = () => {
       {/* ******************** */}
       {/* Social Icon          */}
       {/* ******************** */}
-      {hamMenu ? <SocialIcons /> : <></>}
+      <SocialIcons />
     </div>
   );
 };

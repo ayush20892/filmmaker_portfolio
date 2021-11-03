@@ -42,8 +42,10 @@
   .menu-items {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     font-size: 20px;
+    min-height: 70vh;
   }
 
   .menu-item-pill {

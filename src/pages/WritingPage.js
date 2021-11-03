@@ -34,7 +34,7 @@ const WritingPage = () => {
       {/* ******************** */}
       {/* Social Icon          */}
       {/* ******************** */}
-      {hamMenu || !isMobile ? <SocialIcons /> : <></>}
+      <SocialIcons />
     </div>
   );
 };

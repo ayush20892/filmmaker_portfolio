@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: flex-start;
   margin: 20px 40px;
+  min-height: 70vh;
 }
 
 .about-content {
@@ -13,7 +14,7 @@
 
 .about-image {
   width: 50%;
-  height: 500px;
+  height: 450px;
   margin: 20px;
 }
 
@@ -23,17 +24,19 @@
   object-fit: contain;
 }
 
+.mail-button {
+  font-size: 15px;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+}
+
 .resume-button {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   margin: 20px 0;
-  font-style: italic;
-}
-
-.mail-button {
-  font-size: 15px;
-  cursor: pointer;
   font-style: italic;
   text-decoration: none;
   color: black;

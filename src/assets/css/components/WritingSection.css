@@ -6,6 +6,7 @@
   padding: 10px;
   margin: auto;
   margin-top: 20px;
+  min-height: 70vh;
 }
 .writing-topic {
   width: 40%;
