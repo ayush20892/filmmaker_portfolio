@@ -10,7 +10,7 @@ const WritingSection = () => {
       {/*************************/}
       {WritingPageArray.map((topic) => {
         return (
-          <div className="writing-topic">
+          <div key={topic.topic} className="writing-topic">
             {/* ****************************** */}
             {/* Writing Topic Name&desc          */}
             {/* ****************************** */}

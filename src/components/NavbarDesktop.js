@@ -24,6 +24,7 @@ const NavbarDesktop = ({ textColor }) => {
         {NavbarContent.menuItems.map((menuItem) => {
           return (
             <NavLink
+              key={menuItem}
               to={`/${menuItem.toLowerCase()}`}
               className={`menu-item-pill ${
                 textColor === "white" ? "text-light" : "text-dark"
