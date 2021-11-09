@@ -1,12 +1,10 @@
 import "../assets/css/components/Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { NavLink, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 import NavbarContent from "../assets/NavbarContent";
 
 const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
-  const navigate = useNavigate();
   const { pathname } = useLocation();
   return (
     <>
@@ -17,15 +15,15 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
             {/* ************************** */}
             {/* Portfolio Client Name      */}
             {/* ************************** */}
-            <NavLink
+            <Link
               to="/"
-              onClick={() => navigate("/")}
+              onClick={() => setHamMenu(0)}
               className={`portfolio-name ${
                 textColor === "white" ? "text-light" : "text-dark"
               }`}
             >
               {NavbarContent.filmmakerName}
-            </NavLink>
+            </Link>
             {/* ************************** */}
             {/* Close cross Icon           */}
             {/* ************************** */}
@@ -42,14 +40,15 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
           <div className="menu-items">
             {NavbarContent.menuItems.map((menuItem) => {
               return (
-                <NavLink
+                <Link
+                  key={menuItem}
                   to={`/${menuItem.toLowerCase()}`}
                   className={`menu-item-pill ${
                     textColor === "white" ? "text-light" : "text-dark"
                   } ${pathname === `/${menuItem.toLowerCase()}` && "fw-bold"}`}
                 >
                   {menuItem}
-                </NavLink>
+                </Link>
               );
             })}
           </div>
@@ -60,15 +59,14 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
           {/* ************************** */}
           {/* Portfolio Client Name      */}
           {/* ************************** */}
-          <NavLink
+          <Link
             to="/"
-            onClick={() => navigate("/")}
             className={`portfolio-name ${
               textColor === "white" ? "text-light" : "text-dark"
             }`}
           >
             {NavbarContent.filmmakerName}
-          </NavLink>
+          </Link>
           {/* ************************** */}
           {/* Hamburger Icon             */}
           {/* ************************** */}
