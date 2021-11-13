@@ -37,7 +37,6 @@ const PhotographySectionDesktop = () => {
         {photographyPageContent
           .filter((topic) => topic.topicNo === activeTopic)[0]
           .imageArray.map((picture) => {
-            console.log(picture);
             return (
               <div key={picture} className="picture">
                 <img

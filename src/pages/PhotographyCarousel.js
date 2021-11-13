@@ -9,10 +9,13 @@ const PhotographyCarousel = () => {
   const { topicNo } = useParams();
   const [imgNo, setImgNo] = useState(topicNo[2]);
   const navigate = useNavigate();
+
   const imgSrcArray = photographyPageContent.filter(
     (topic) => topic.topicNo === topicNo.substring(0, 2)
   )[0].imageArray;
-
+  const imgCategoryName = photographyPageContent.filter(
+    (topic) => topic.topicNo === topicNo.substring(0, 2)
+  )[0].photographyTitle;
   function leftNavigation() {
     if (JSON.parse(imgNo) - 1 < 0) {
       setImgNo(JSON.stringify(imgSrcArray.length - 1));
@@ -38,7 +41,14 @@ const PhotographyCarousel = () => {
         onClick={leftNavigation}
         className="nav-arrow nav-arrow-left"
       />
-      <img src={imgSrcArray[imgNo]} alt="" />
+      <div className="main-img">
+        <div className="img-topic">{imgCategoryName}</div>
+        <img src={imgSrcArray[imgNo]} alt="" />
+        <div className="img-no">
+          {JSON.parse(imgNo) + 1}/{imgSrcArray.length}
+        </div>
+      </div>
+
       <BsFillCaretRightFill
         onClick={rightNavigation}
         className="nav-arrow nav-arrow-right"
