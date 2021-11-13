@@ -33,7 +33,15 @@ const PhotographySectionMobile = () => {
                   (picture) => {
                     return (
                       <div key={picture} className="picture">
-                        <img src={picture} alt="" />
+                        <img
+                          src={picture}
+                          onClick={() =>
+                            navigate(
+                              `/photography/${picture.substring(14, 17)}`
+                            )
+                          }
+                          alt=""
+                        />
                       </div>
                     );
                   }
