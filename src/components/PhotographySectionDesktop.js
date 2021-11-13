@@ -2,9 +2,11 @@ import "../assets/css/components/PhotographySection.css";
 import photographyPageContent from "../assets/PhotographyPageContent";
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const PhotographySectionDesktop = () => {
   const [activeTopic, setActiveTopic] = useState("t1");
+  const navigate = useNavigate();
 
   function topicClickHandler(e) {
     setActiveTopic(e.target.id);
@@ -35,9 +37,16 @@ const PhotographySectionDesktop = () => {
         {photographyPageContent
           .filter((topic) => topic.topicNo === activeTopic)[0]
           .imageArray.map((picture) => {
+            console.log(picture);
             return (
               <div key={picture} className="picture">
-                <img src={picture} alt="" />
+                <img
+                  src={picture}
+                  onClick={() =>
+                    navigate(`/photography/${picture.substring(14, 17)}`)
+                  }
+                  alt=""
+                />
               </div>
             );
           })}

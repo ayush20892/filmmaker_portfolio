@@ -1,0 +1,36 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.nav-arrow {
+  font-size: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  .carousel-container {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-container > img {
+    width: 90%;
+    object-fit: contain;
+  }
+
+  .nav-arrow {
+    font-size: 20px;
+    margin: 0px;
+  }
+}
