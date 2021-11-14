@@ -13,31 +13,32 @@ const PhotographySectionMobile = () => {
   }
 
   useEffect(() => {
-    navigate(`/photography`);
+    navigate(`/photography#${activeTopic}`);
   }, [activeTopic, navigate]);
 
   return (
     <div className="photo-container">
-      {Object.keys(photographyPageContent).map((topic) => {
+      {photographyPageContent.map((topic) => {
         return (
           <div
-            id={topic}
-            className={`topic ${activeTopic === topic && "active-topic"}`}
+            key={topic.topicNo}
+            id={topic.topicNo}
+            className={`topic ${
+              activeTopic === topic.topicNo && "active-topic"
+            }`}
             onClick={topicClickHandler}
           >
-            {photographyPageContent[topic].photographyTitle}
-            {activeTopic === topic && <BsArrowRight className="ms-2" />}
-            {activeTopic === topic && (
+            {topic.photographyTitle}
+            {activeTopic === topic.topicNo && <BsArrowRight className="ms-2" />}
+            {activeTopic === topic.topicNo && (
               <div className="photos">
-                {photographyPageContent[activeTopic].imageArray.map(
-                  (picture) => {
-                    return (
-                      <div key={picture} className="picture">
-                        <img src={picture} alt="" />
-                      </div>
-                    );
-                  }
-                )}
+                {topic.imageArray.map((picture) => {
+                  return (
+                    <div key={picture} className="picture">
+                      <img src={picture} alt="" />
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
