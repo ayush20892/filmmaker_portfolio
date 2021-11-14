@@ -5,6 +5,7 @@ import About from "./pages/AboutPage";
 import PhotographyPage from "./pages/PhotographyPage";
 import MoviesPage from "./pages/MoviesPage";
 import WritingPage from "./pages/WritingPage";
+import PhotographyCarousel from "./pages/PhotographyCarousel";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/writing" element={<WritingPage />} />
+        <Route path="/photography/:topicNo" element={<PhotographyCarousel />} />
       </Routes>
     </div>
   );

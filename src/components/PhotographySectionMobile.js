@@ -32,13 +32,23 @@ const PhotographySectionMobile = () => {
             {activeTopic === topic.topicNo && <BsArrowRight className="ms-2" />}
             {activeTopic === topic.topicNo && (
               <div className="photos">
-                {topic.imageArray.map((picture) => {
-                  return (
-                    <div key={picture} className="picture">
-                      <img src={picture} alt="" />
-                    </div>
-                  );
-                })}
+                {photographyPageContent[activeTopic].imageArray.map(
+                  (picture) => {
+                    return (
+                      <div key={picture} className="picture">
+                        <img
+                          src={picture}
+                          onClick={() =>
+                            navigate(
+                              `/photography/${picture.substring(14, 17)}`
+                            )
+                          }
+                          alt=""
+                        />
+                      </div>
+                    );
+                  }
+                )}
               </div>
             )}
           </div>
