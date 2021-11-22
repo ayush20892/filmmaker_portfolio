@@ -44,7 +44,9 @@
   object-fit: cover;
   cursor: pointer;
 }
-
+.picture > img:hover {
+  opacity: 0.4;
+}
 @media screen and (max-width: 640px) {
   .photo-container {
     display: flex;
