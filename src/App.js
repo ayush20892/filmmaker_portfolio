@@ -6,10 +6,17 @@ import PhotographyPage from "./pages/PhotographyPage";
 import MoviesPage from "./pages/MoviesPage";
 import WritingPage from "./pages/WritingPage";
 import PhotographyCarousel from "./pages/PhotographyCarousel";
-
+import { useThemeContext } from "./context/theme-context";
 const App = () => {
+  const { state } = useThemeContext();
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundColor: state.theme === "dark" ? "black" : "white",
+        color: state.theme === "dark" ? "white" : "black",
+      }}
+    >
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/photography" element={<PhotographyPage />} />

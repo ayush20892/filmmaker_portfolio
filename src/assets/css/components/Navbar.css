@@ -1,9 +1,11 @@
 .portfolio-name {
+  letter-spacing: 3px;
   font-family: "Roboto Slab", serif;
   padding: 30px;
   font-size: 40px;
   text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .menu-items {
@@ -18,15 +20,16 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 .ham-icon {
   font-size: 30px;
-  margin: 0 20px;
+  margin: 15px 30px;
   cursor: pointer;
+  float: right;
 }
 
 @media screen and (max-width: 640px) {
   .portfolio-name {
+    letter-spacing: 0;
     font-family: "Roboto Slab", serif;
     padding: 20px;
     font-size: 30px;
@@ -35,10 +38,14 @@
 
   .header-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
   }
-
+  .ham-icon {
+    font-size: 30px;
+    margin: 0 20px;
+    cursor: pointer;
+  }
   .menu-items {
     display: flex;
     flex-direction: column;
