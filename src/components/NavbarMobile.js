@@ -3,8 +3,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import NavbarContent from "../assets/NavbarContent";
+import { MdDarkMode } from "react-icons/md";
+import { BsFillSunFill } from "react-icons/bs";
+
+import { useThemeContext } from "../context/theme-context";
 
 const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
+  const { state, dispatch } = useThemeContext();
+
   const { pathname } = useLocation();
   return (
     <>
@@ -18,9 +24,8 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
             <Link
               to="/"
               onClick={() => setHamMenu(0)}
-              className={`portfolio-name ${
-                textColor === "white" ? "text-light" : "text-dark"
-              }`}
+              className="portfolio-name"
+              style={{ color: state.theme === "dark" ? "white" : "black" }}
             >
               {NavbarContent.filmmakerName}
             </Link>
@@ -28,9 +33,8 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
             {/* Close cross Icon           */}
             {/* ************************** */}
             <AiOutlineClose
-              className={`ham-icon ${
-                textColor === "white" ? "text-light" : "text-dark"
-              }`}
+              className="ham-icon"
+              style={{ color: state.theme === "dark" ? "white" : "black" }}
               onClick={() => setHamMenu(!hamMenu)}
             />
           </div>
@@ -44,8 +48,9 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
                   key={menuItem}
                   to={`/${menuItem.toLowerCase()}`}
                   className={`menu-item-pill ${
-                    textColor === "white" ? "text-light" : "text-dark"
-                  } ${pathname === `/${menuItem.toLowerCase()}` && "fw-bold"}`}
+                    pathname === `/${menuItem.toLowerCase()}` && "fw-bold"
+                  }`}
+                  style={{ color: state.theme === "dark" ? "white" : "black" }}
                 >
                   {menuItem}
                 </Link>
@@ -61,9 +66,8 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
           {/* ************************** */}
           <Link
             to="/"
-            className={`portfolio-name ${
-              textColor === "white" ? "text-light" : "text-dark"
-            }`}
+            className="portfolio-name"
+            style={{ color: state.theme === "dark" ? "white" : "black" }}
           >
             {NavbarContent.filmmakerName}
           </Link>
@@ -71,11 +75,24 @@ const NavbarMobile = ({ textColor, hamMenu, setHamMenu }) => {
           {/* Hamburger Icon             */}
           {/* ************************** */}
           <GiHamburgerMenu
-            className={`ham-icon ${
-              textColor === "white" ? "text-light" : "text-dark"
-            }`}
+            className="ham-icon"
+            style={{ color: state.theme === "dark" ? "white" : "black" }}
             onClick={() => setHamMenu(!hamMenu)}
           />
+          {/* ************************** */}
+          {/* Theme Icon             */}
+          {/* ************************** */}
+          {state.theme === "dark" ? (
+            <BsFillSunFill
+              className="ham-icon"
+              onClick={() => dispatch({ type: "theme" })}
+            />
+          ) : (
+            <MdDarkMode
+              className="ham-icon"
+              onClick={() => dispatch({ type: "theme" })}
+            />
+          )}
         </div>
       )}
     </>

@@ -16,16 +16,12 @@ const HomePage = () => {
   return (
     <div className={` ${hamMenu ? "" : "home-background-image"} w-100`}>
       {isMobile ? (
-        <NavbarMobile
-          textColor={hamMenu ? "black" : "white"}
-          hamMenu={hamMenu}
-          setHamMenu={setHamMenu}
-        />
+        <NavbarMobile hamMenu={hamMenu} setHamMenu={setHamMenu} />
       ) : (
         <NavbarDesktop textColor="white" />
       )}
       {!hamMenu && <div className="home-content"></div>}
-      <SocialIcons iconColor={hamMenu ? "black" : "white"} />
+      <SocialIcons />
     </div>
   );
 };
