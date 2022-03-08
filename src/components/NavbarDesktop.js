@@ -22,12 +22,12 @@ const NavbarDesktop = ({ textColor }) => {
       </NavLink>
       {state.theme === "dark" ? (
         <BsFillSunFill
-          className="ham-icon"
+          className="ham-icon-desktop"
           onClick={() => dispatch({ type: "theme" })}
         />
       ) : (
         <MdDarkMode
-          className="ham-icon desktop-icon"
+          className="ham-icon-desktop"
           onClick={() => dispatch({ type: "theme" })}
         />
       )}

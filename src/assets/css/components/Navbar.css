@@ -20,12 +20,10 @@
   text-decoration: none;
   cursor: pointer;
 }
-.ham-icon {
+.ham-icon-desktop {
   font-size: 30px;
   margin: 15px 30px;
   cursor: pointer;
-}
-.desktop-icon {
   position: absolute;
   right: 0;
 }
