@@ -27,7 +27,7 @@ const NavbarDesktop = ({ textColor }) => {
         />
       ) : (
         <MdDarkMode
-          className="ham-icon"
+          className="ham-icon desktop-icon"
           onClick={() => dispatch({ type: "theme" })}
         />
       )}

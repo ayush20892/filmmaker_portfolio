@@ -24,7 +24,10 @@
   font-size: 30px;
   margin: 15px 30px;
   cursor: pointer;
-  float: right;
+}
+.desktop-icon {
+  position: absolute;
+  right: 0;
 }
 
 @media screen and (max-width: 640px) {
